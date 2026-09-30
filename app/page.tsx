@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { HomeHero } from "@/components/home/HomeHero";
+import { HomeServices } from "@/components/home/HomeServices";
 
 export const metadata: Metadata = {
   title: "Laundry & Dry Cleaning in Prayagraj",
@@ -11,6 +12,7 @@ export default function HomePage() {
   return (
     <main className="overflow-hidden bg-white">
       <HomeHero />
+      <HomeServices />
     </main>
   );
 }
