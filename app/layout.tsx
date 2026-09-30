@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import { MobileBookPickup } from "@/components/layout/MobileBookPickup";
+import { SiteFooter } from "@/components/layout/SiteFooter";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { TopBar } from "@/components/layout/TopBar";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,7 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <TopBar />
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+        <MobileBookPickup />
+      </body>
     </html>
   );
 }

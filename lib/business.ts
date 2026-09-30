@@ -36,4 +36,15 @@ export const business = {
   },
 } as const;
 
+const pickupMessage = [
+  "Hello UJALA Dry Clean,",
+  "",
+  "I would like to book a laundry / dry-cleaning pickup.",
+  "Please share the available pickup slots.",
+].join("\n");
+
+export const pickupWhatsappHref = `${business.whatsapp.href}?text=${encodeURIComponent(
+  pickupMessage,
+)}`;
+
 export type Business = typeof business;
